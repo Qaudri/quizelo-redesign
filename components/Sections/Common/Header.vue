@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-7xl mx-auto px-6 md:px-0">
+  <section class="container mx-auto px-6 md:px-0">
     <div class="block md:flex justify-between items-center py-6 bg-white ">
 
       <div class="flex justify-between">

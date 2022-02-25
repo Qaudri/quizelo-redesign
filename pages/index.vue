@@ -2,9 +2,9 @@
 
   <body>
 
-    <section class="h-screen w-full ">
+    <section class="h-screen w-full items-center flex justify-center">
       <div
-        class="w-1/4 fixed  rounded-2xl border-2 border-accent1-500 p-8 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 transform ">
+        class="w-2/3 md:w-1/2 lg:w-1/4 fixed  rounded-2xl border-2 border-accent1-500 p-8 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 transform ">
         
         <div class="flex items-center justify-center py-6 -mt-20 bg-white rounded-full border-2 border-accent1-500">
           <img :src="require('@/assets/images/quizelo.svg')" class="w-32" />
@@ -12,7 +12,7 @@
       
 
         <form class="py-2">
-          <input placeholder="Enter your name to Start Game"
+          <input placeholder="Enter your name to start"
             class="select-none my-6 text-xl w-full border-b border-gray-400 outline-none text-center p-4" />
 
           <div class="w-full">
