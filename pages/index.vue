@@ -1,6 +1,40 @@
 <template>
-  <Tutorial/>
+
+  <body>
+
+    <section class="h-screen w-full ">
+      <div
+        class="w-1/4 fixed  rounded-2xl border-2 border-accent1-500 p-8 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 transform ">
+        
+        <div class="flex items-center justify-center py-6 -mt-20 bg-white rounded-full border-2 border-accent1-500">
+          <img :src="require('@/assets/images/quizelo.svg')" class="w-32" />
+        </div>
+      
+
+        <form class="py-2">
+          <input placeholder="Enter your name to Start Game"
+            class="select-none my-6 text-xl w-full border-b border-gray-400 outline-none text-center p-4" />
+          <button
+            class="cursor-pointer bg-gradient-to-r from-accent1-500 to-accent2-500 w-full px-4 py-4 uppercase border-0 text-white rounded-lg font-medium">
+            Start
+          </button>
+          
+          
+        </form>
+        
+        <a
+          class="cursor-pointer bg-blue-700 w-full px-4 py-4 uppercase border-0 text-white rounded-lg font-medium flex items-center justify-center">
+          <img :src="require('@/assets/images/fb.svg')" class="w-6 mr-2" />
+          <p class="">Play with Facebook</p>
+        </a>
+        
+      </div>
+    </section>
+
+  </body>
 </template>
+
+
 
 <script>
 export default {
