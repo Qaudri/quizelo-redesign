@@ -14,10 +14,14 @@
         <form class="py-2">
           <input placeholder="Enter your name to Start Game"
             class="select-none my-6 text-xl w-full border-b border-gray-400 outline-none text-center p-4" />
-          <button
+
+          <div class="w-full">
+            <button href="/start_game"
             class="cursor-pointer bg-gradient-to-r from-accent1-500 to-accent2-500 w-full px-4 py-4 uppercase border-0 text-white rounded-lg font-medium">
             Start
-          </button>
+            </button>
+          </div>
+
           
           
         </form>
