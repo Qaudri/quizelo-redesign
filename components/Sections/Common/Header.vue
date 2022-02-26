@@ -1,6 +1,6 @@
 <template>
   <section class="container mx-auto px-6 md:px-0">
-    <div class="block md:flex justify-between items-center py-6 bg-white ">
+    <div class="block md:flex justify-between items-center py-4 bg-white ">
 
       <div class="flex justify-between">
         <div >
@@ -31,7 +31,7 @@
         </a>
   
         <a href="#"
-          class=" mx-6 cursor-pointer md:mx-8 border bg-gradient-to-r from-accent1-500 to-accent2-500  px-4 py-3 uppercase text-white rounded-lg font-medium">
+          class=" mx-6 cursor-pointer md:mx-8 border bg-gradient-to-r from-accent1-500 to-accent2-500  px-6 py-3 uppercase text-white rounded-lg font-medium">
           Login
         </a>
       </div>
