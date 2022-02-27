@@ -4,20 +4,21 @@
 
       <div class="flex justify-between">
         <div >
-          <img :src="require('@/assets/images/quizelo.svg')" class="w-32" />
+          <img  :src="require('@/assets/images/quizelo.svg')" class="w-32" />
         </div>
 
-        <div id="menu-button" class="block md:hidden justify-end">
-          <img :src="require('@/assets/images/menu.svg')" alt="" width="30px" />
+        <div class="block md:hidden justify-end">
+          <img @click="toggleMenu" :class="is_menu_open ? 'hidden' : 'block' "
+          :src="require('@/assets/images/menu.svg')" alt="" width="30px" />
         </div>
 
-        <div id="close-button" class="hidden md:hidden">
-          <img :src="require('@/assets/images/close_window.svg')" alt="" width="30px" />
+        <div :class="is_menu_open ? 'block' : 'hidden' " class="md:hidden">
+          <img @click="toggleMenu" :src="require('@/assets/images/close_window.svg')" alt="" width="30px" />
         </div>
         
       </div>
 
-      <div class="items-center md:flex hidden" id="menu-items">
+      <div :class="is_menu_open ? 'block' : 'hidden'" class="items-center md:m-0 pt-4 md:flex md:h-auto h-screen-90 md:bg-transparent bg-white position md:max-w-max w-full">
         <a href="#" class="pb-2 px-6 md:p-0 my-6 md:my-0 md:mx-6 block border-b-2 md:border-none">
           How it works?
         </a>
@@ -42,11 +43,26 @@
 </template>
 
 <script>
-export default {
+export default{
+	data(){
+    return{
+      is_menu_open: false,
+    }
+  },
 
+  methods: {
+    toggleMenu(){
+      this.is_menu_open = !this.is_menu_open;
+    },
+
+  }
 }
+
 </script>
 
 <style>
+body{
+  overflow-x: hidden;
+}
 
 </style>
