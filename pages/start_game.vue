@@ -1,61 +1,47 @@
 <template>
-  <div>
 
-    <SectionsCommonHeader />
+  <body>
 
-    <section class="mx-auto container">
-      <div class=" flex items-center">
-        <div class="w-full">
-          <div class="lg:flex justify-between px-6 md:px-10 2xl:p-0">
-            <div class="w-full lg:w-1/2">
-              <div class="pt-16 text-4xl md:text-6xl font-bold">
-                <div>
-                  <h2>Learn <br> new concepts <br>for each question</h2>
-                </div>
-              </div>
-
-              <div class="mt-8 border-l-2 p-3 border-gray-800">
-                <p class="text-gray-400">We help you prepare for exams and quizes</p>
-              </div>
-
-              <div class="flex mt-8">
-                <a href="/quiz_page"
-                  class="cursor-pointer border-2 bg-gradient-to-r from-accent1-500 to-accent2-500  px-4 py-3 uppercase text-white rounded-lg font-medium">
-                  Start Solving
-              </a>
-
-                <div class="ml-3 flex items-center">
-                  <div class="mx-1">
-                    <img :src="require('@/assets/images/dropdown.jpeg')">
-                  </div>
-
-                  <div>
-                    Know More
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="w-full lg:w-1/2">
-              <img :src="require('@/assets/images/people.svg')" class="w-full">
-            </div>
-
-          </div>
+    <section class="h-screen w-full items-center flex justify-center">
+      <div
+        class="w-2/3 md:w-1/2 lg:w-1/4 fixed  rounded-2xl border-2 border-accent1-500 p-8 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 transform ">
+        
+        <div class="flex items-center justify-center py-6 -mt-20 bg-white rounded-full border-2 border-accent1-500">
+          <img :src="require('@/assets/images/quizelo.svg')" class="w-32" />
         </div>
+      
+
+        <form class="py-2">
+          <input placeholder="Enter your name to start"
+            class="select-none my-6 text-xl w-full border-b border-gray-400 outline-none text-center p-4" />
+
+          <div class="w-full">
+            <button href="/start_game"
+            class="cursor-pointer bg-gradient-to-r from-accent1-500 to-accent2-500 w-full px-4 py-4 uppercase border-0 text-white rounded-lg font-medium">
+            Start
+            </button>
+          </div>
+
+          
+          
+        </form>
+        
+        <a
+          class="cursor-pointer bg-blue-700 w-full px-4 py-4 uppercase border-0 text-white rounded-lg font-medium flex items-center justify-center">
+          <img :src="require('@/assets/images/fb.svg')" class="w-6 mr-2" />
+          <p class="">Play with Facebook</p>
+        </a>
+        
       </div>
-
-
     </section>
-  </div>
+
+  </body>
 </template>
+
+
 
 <script>
 export default {
-
+  name: 'IndexPage'
 }
 </script>
-
-<style>
-
-</style>
