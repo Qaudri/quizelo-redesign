@@ -7,7 +7,11 @@
 
     <div class="flex items-center justify-center">
       <img :src="require('@/assets/images/clock.svg')" width="50px" alt="">
-      <p class="absolute">60</p>
+
+      <div class="absolute font-medium text-black">
+        {{countDown}}
+      </div>
+
     </div>
 
     <div class="flex">
@@ -40,7 +44,28 @@
 
 <script>
 export default {
+  data() {
+      return {
+          countDown: 30
+      }
+  },
 
+  watch: {
+
+      countDown: {
+          handler(value) {
+
+              if (value > 0) {
+                  setTimeout(() => {
+                      this.countDown--;
+                  }, 1000);
+              }
+
+          },
+          immediate: true // This ensures the watcher is triggered upon creation
+      }
+
+  }
 }
 </script>
 
