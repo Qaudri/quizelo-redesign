@@ -1,23 +1,39 @@
 <template>
-  <div class="flex justify-between w-full">
-    <div class="flex bg-accent3-300 p-2 hover:bg-transparent hover:border-accent3-400 hover:border-2">
+  <div class="flex justify-between w-full items-center">
+    <div class="flex items-center mt-2 bg-accent3-300 py-2 px-4 ease-in-out duration-500 hover:bg-transparent border-accent3-400 border-2">
       <img :src="require('@/assets/images/backward.svg')" alt="" class="mr-2" />
       <p class="font-medium text-accent3-600 mt-1">Previous</p>
     </div>
 
-    <div><img :src="require('@/assets/images/clock.svg')" alt="">
+    <div class="flex items-center justify-center">
+      <img :src="require('@/assets/images/clock.svg')" width="50px" alt="">
+      <p class="absolute">60</p>
     </div>
 
     <div class="flex">
-      <div class="flex bg-accent1-600 p-2 hover:bg-transparent hover:border-accent1-600 hover:border-2">
-        <p class="font-medium text-white mr-2 hover:text-accent1-600">Next</p>
-        <img :src="require('@/assets/images/forward.svg')" alt="">
+
+      <div class="group">
+
+        <div class="flex items-center bg-accent1-600 py-2 ease-in-out duration-500 px-4 group-hover:bg-transparent border-accent1-600 border-2 ">
+
+          <p class="font-medium text-white mr-2 group-hover:text-accent1-600">Next</p>
+
+          <div class="group-hover:hidden mt-1">
+            <img :src="require('@/assets/images/forward.svg')" alt="" width="8px" class="">
+          </div>
+
+          <div class="group-hover:block hidden mt-1">
+            <img :src="require('@/assets/images/forward-orange.svg')" alt="" width="8px" class="">
+          </div>
+        </div>
+
       </div>
 
-      <div class="flex mx-2 p-2">
+
+      <div class="flex mx-2 p-2 items-center">
         <p class="font-medium text-accent1-600 mr-2">Skip</p>
-        <img :src="require('@/assets/images/fast-forward.svg')" alt="">
-      </div>
+        <img :src="require('@/assets/images/fast-forward.svg')" class="mt-1" alt="" width="12px">
+      </div> 
     </div>
   </div>
 </template>
