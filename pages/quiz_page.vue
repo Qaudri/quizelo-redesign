@@ -5,13 +5,13 @@
       <div class="w-full">
         <div class="">
 
-          <div class="bg-accent1-300 bg-opacity-20 p-6 w-screen mx-auto rounded-xl">
+          <div class="bg-accent1-300 bg-opacity-20 p-6 w-screen mx-auto">
             <SectionsQuizQuestion />
           </div>
 
         </div>
         
-        <div class="px-6 md:px-0 container mx-auto my-24">
+        <div class="px-6 md:px-0 container mx-auto my-20">
           <SectionsQuizAnswer />
         </div>
         
