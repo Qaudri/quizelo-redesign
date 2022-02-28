@@ -4,9 +4,7 @@
     <div class="block md:flex justify-between items-center py-4 bg-white ">
 
       <div class="flex justify-between items-center">
-        <div >
-          <img  :src="require('@/assets/images/quizelo.svg')" class="w-32" />
-        </div>
+        <UiSharedLogo />
 
         <div class="block md:hidden justify-end">
           <img @click="toggleMenu" :class="is_menu_open ? 'hidden' : 'block' "
