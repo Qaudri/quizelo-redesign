@@ -21,9 +21,9 @@
             Start
             </a>
 
-            <div class="py-6 w-full bg-gradient-to-r from-accent1-500 to-accent2-500 cursor-pointer rounded-lg">
+            <nuxt-link to="/quiz_page" class="py-6 w-full bg-gradient-to-r from-accent1-500 to-accent2-500 cursor-pointer rounded-lg">
 
-            </div>
+            </nuxt-link>
           </div>
 
           
