@@ -4,10 +4,14 @@
     <SectionsCommonHeader />
 
     <section class="mx-auto container">
+
       <div class=" flex items-center">
+
         <div class="w-full">
+
           <div class="lg:flex justify-between px-6 md:px-10 2xl:p-0">
             <div class="w-full lg:w-1/2">
+            
               <div class="pt-16 text-4xl md:text-6xl font-bold">
                 <div>
                   <h2>Learn <br> new concepts <br>for each question</h2>
@@ -19,7 +23,7 @@
               </div>
 
               <div class="flex mt-8">
-                <a href="/quiz_page"
+                <a href="/start_game"
                   class="cursor-pointer border-2 bg-gradient-to-r from-accent1-500 to-accent2-500  px-4 py-3 uppercase text-white rounded-lg font-medium">
                   Start Solving
               </a>
