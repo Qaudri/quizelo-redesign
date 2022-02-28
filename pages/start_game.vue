@@ -15,11 +15,15 @@
           <input placeholder="Enter your name to start"
             class="select-none my-6 text-xl w-full border-b border-gray-400 outline-none text-center p-4" />
 
-          <div class="w-full">
-            <button href="/start_game"
-            class="cursor-pointer bg-gradient-to-r from-accent1-500 to-accent2-500 w-full px-4 py-4 uppercase border-0 text-white rounded-lg font-medium">
+          <div class="w-full flex items-center justify-center">
+            <a href="/quiz_page"
+            class="absolute cursor-pointer uppercase border-0 text-white font-medium">
             Start
-            </button>
+            </a>
+
+            <div class="py-6 w-full bg-gradient-to-r from-accent1-500 to-accent2-500 cursor-pointer rounded-lg">
+
+            </div>
           </div>
 
           
@@ -42,6 +46,12 @@
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+
+  methods:{
+    pushLink(){
+      this.$router.push({path: '/quiz_page'})
+    }
+  }
 }
 </script>
