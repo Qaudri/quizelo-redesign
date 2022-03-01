@@ -1,24 +1,30 @@
 <template>
-    <div>
-        <FaqQuestion @questionClicked="toggleAnswer" >
-          <div>
-            This is the question
-          </div>
-        </FaqQuestion>
+  <div >
+    <FaqQuestion @questionClicked="toggleAnswer" >
+      {{question}}
+    </FaqQuestion>
 
-        <FaqAnswer :class="answerRevealed ? 'block' : 'hidden'">
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iusto magnam odio atque ullam impedit molestiae provident natus sed blanditiis. Blanditiis est modi maiores, corrupti at nisi praesentium dicta quam!
-          </div>
-        </FaqAnswer>
-    </div>
+    <FaqAnswer :class="answerRevealed ? 'block' : 'hidden'">
+      {{answer}}
+    </FaqAnswer>
+  </div>
 </template>
 
 <script>
+
+
+
 export default {
+
+  props:{
+    question: String,
+    answer: String
+  },
+
+
   data(){
     return{
-      answerRevealed: false
+      answerRevealed: false,
     }
   },
 
@@ -26,7 +32,13 @@ export default {
     toggleAnswer(){
       this.answerRevealed = !this.answerRevealed
     }
-  }
+  },
+
+  // computed: {
+  //   ...mapGetters({
+  //     faqItems : 'faqs/getFaqItems'
+  //   })
+  // }
 
 }
 </script>

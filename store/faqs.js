@@ -41,3 +41,9 @@ export const state = () => ({
 
   Is_user_logged: null,
 })
+
+export const getters = {
+  getFaqItems(state) {
+    return state.items
+  }
+}

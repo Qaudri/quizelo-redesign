@@ -14,24 +14,25 @@
     </div>
 
     <div class="grid md:grid-cols-2 gap-6">
-      <UiCardsFaqcard />
+      <UiCardsFaqcard v-for="item in faqItems" :key="item.id" :question="item.question" :answer="item.answer"/>
     </div>
+    
   </div>
 </template>
 
 <script>
-export default {
-  data(){
-    return{
-      answerRevealed: false
-    }
-  },
 
-  methods: {
-    toggleAnswer(){
-      this.answerRevealed = !this.answerRevealed
-    }
+import {mapGetters} from 'vuex';
+
+
+export default {
+
+  computed: {
+    ...mapGetters({
+      faqItems : 'faqs/getFaqItems'
+    })
   }
+
 }
 </script>
 
