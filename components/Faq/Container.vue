@@ -13,10 +13,10 @@
 
     </div>
 
-    <div class="grid md:grid-cols-2 gap-6">
+    <div class="grid md:grid-cols-2 gap-6 px-8 md:px-0">
       <UiCardsFaqcard v-for="item in faqItems" :key="item.id" :question="item.question" :answer="item.answer"/>
     </div>
-    
+
   </div>
 </template>
 
