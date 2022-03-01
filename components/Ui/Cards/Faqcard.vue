@@ -16,6 +16,17 @@
 
 <script>
 export default {
+  data(){
+    return{
+      answerRevealed: false
+    }
+  },
+
+  methods: {
+    toggleAnswer(){
+      this.answerRevealed = !this.answerRevealed
+    }
+  }
 
 }
 </script>

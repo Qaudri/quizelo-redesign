@@ -12,7 +12,7 @@ export default {
 
 <style>
 .slideDown{
-  animation: slideDown .5s forwards;
+  animation: slideDown .75s forwards;
 }
 
 @keyframes slideDown {

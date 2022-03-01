@@ -14,7 +14,7 @@
     </div>
 
     <div class="grid md:grid-cols-2 gap-6">
-
+      <UiCardsFaqcard />
     </div>
   </div>
 </template>
