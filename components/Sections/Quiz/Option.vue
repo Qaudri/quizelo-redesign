@@ -7,7 +7,7 @@
 
       <div 
       class="text-accent3-700 font-medium text-md md:text-xl md:px-8 group-hover:text-white uppercase">
-      {{optionTitle}}
+      {{OptionTitle}}
       </div>
 
     </div>
@@ -18,11 +18,11 @@ export default {
   name: 'OptionValue',
 
   props: {
-    optionName: {
+    OptionName: {
       default: "A",
     },
 
-    optionTitle: {
+    OptionTitle: {
       default: "Option"
     },
   },

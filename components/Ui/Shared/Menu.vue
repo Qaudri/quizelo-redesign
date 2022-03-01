@@ -13,6 +13,10 @@
         About Us
       </a>
 
+      <a href="/Faq" class="pb-2 px-6 md:p-0 my-6 md:my-0 md:mx-6 block border-b-2 md:border-none">
+        FAQs
+      </a>
+
       <a href="#"
         class=" mx-6 cursor-pointer md:mx-8 border bg-gradient-to-r from-accent1-500 to-accent2-500  px-6 py-3 uppercase text-white rounded-lg font-medium">
         Login
