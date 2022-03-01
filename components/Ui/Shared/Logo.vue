@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <a href="/">
     <img  :src="require('@/assets/images/quizelo.svg')" class="w-32" />
-  </div>
+  </a>
 </template>
 
 <script>
