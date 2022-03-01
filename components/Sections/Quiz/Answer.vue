@@ -20,6 +20,12 @@
         <h1 class="text-accent3-600 font-medium text-md md:text-xl md:px-8 group-hover:text-white uppercase">Framer</h1>
     </div>
 
+    <SectionsQuizOption  >      
+      <div>
+        <OptionValue  />
+      </div>
+    </SectionsQuizOption> 
+
   </div>
 </template>
 
