@@ -1,7 +1,7 @@
 <template>
 
-  <div @click="dropDown" :class="is_clicked ? 'border-b-0' : ''"
-  class="w-screen-1/2 flex justify-between px-4 py-3  border-2 border-accent1-600 bg-white
+  <div @click="dropDown" :class="is_clicked ? 'border-b-0 rounded-b-none' : ''"
+  class="w-screen-1/2 flex rounded-lg justify-between px-4 py-3  border-2 border-accent1-600 bg-white
    text-accent1-600 text-lg font-medium">
     <slot class="cursor-pointer" />
 

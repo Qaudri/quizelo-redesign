@@ -1,5 +1,5 @@
 <template>
-  <div class="slideDown border-2 border-accent1-600 border-t-0 w-screen-1/2 bg-white shadow-lg px-4 pb-3 text-black font-normal text-base">
+  <div class="slideDown border-2 rounded-b-lg border-accent1-600 border-t-0 w-screen-1/2 bg-white shadow-lg px-4 pb-3 text-black font-normal text-base">
     <slot class="cursor-pointer" />
   </div>
 </template>
