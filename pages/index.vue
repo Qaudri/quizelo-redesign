@@ -31,7 +31,7 @@
                 <div class="ml-3 flex items-center">
                   
                   <div class="mx-1">
-                    <img :src="require('@/assets/images/dropdown.jpeg')">
+                    <img :src="require('@/assets/images/dropdown.svg')" width="10px">
                   </div>
 
                   <div>
