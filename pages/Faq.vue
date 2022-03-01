@@ -1,5 +1,5 @@
 <template>
-  
+  <FaqContainer />
 </template>
 
 <script>
