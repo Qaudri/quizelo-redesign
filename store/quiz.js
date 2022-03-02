@@ -60,7 +60,19 @@ export const getters = {
 export const actions = {
   retrieveQuestionItems(context){
     if (context.state.current_question === '') {
-      
+      context.commit (SET_CURRENT_QUESTION, context.state.question[0])
     }
+
+    else{
+      context.commit (SET_CURRENT_QUESTION, context.state.question[0])
+
+    }
+  }
+}
+
+
+export const mutations = {
+  SET_CURRENT_QUESTION(state, payload){
+    state.current_question = payload
   }
 }
