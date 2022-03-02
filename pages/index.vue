@@ -3,7 +3,7 @@
 
     <SectionsCommonHeader />
 
-    <section class="mx-auto container">
+    <section class="mx-auto container mt-8">
 
       <div class=" flex items-center">
 
