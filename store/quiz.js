@@ -49,6 +49,7 @@ export const state = () => ({
 
   current_question: '',
   answered_questions: '',
+  question_counter: 0
 })
 
 export const getters = {
@@ -64,7 +65,8 @@ export const actions = {
     }
 
     else{
-      context.commit (SET_CURRENT_QUESTION, context.state.question[0])
+      context.commit(INCREASE_QUESTION_COUNTER)
+      context.commit (SET_CURRENT_QUESTION, context.state.question[context.state.question_counter])
 
     }
   }
@@ -74,5 +76,9 @@ export const actions = {
 export const mutations = {
   SET_CURRENT_QUESTION(state, payload){
     state.current_question = payload
+  },
+
+  INCREASE_QUESTION_COUNTER(state){
+    state.question_counter++
   }
 }
