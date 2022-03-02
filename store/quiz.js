@@ -2,7 +2,7 @@ export const state = () => ({
   questions: [
     {
       id: 1,
-      question: "Who created the HTMl language",
+      question: "Who created the HTML language?",
       options: [
         "A-Tim Bernerslee", "B-John Doe", "C-Tim Bernersly", "D-Chris Do"
       ],
@@ -46,4 +46,12 @@ export const state = () => ({
     },
     
   ],
-}),
+
+  current_question: ''
+})
+
+export const getters = {
+  getQuizQuestion(state) {
+    return state.questions[0]
+  }
+}
