@@ -36,7 +36,15 @@ export const state = () => ({
       answer: "The system stores your score in a record for future purposes and uses the data to create a progess graph for you.",
       active: false,
 
-    }
+    },
+
+    {
+      id: 6,
+      question: "Who is the game for?",
+      answer: "The game is for everyone who wants to test their technical knowledge.",
+      active: false,
+
+    },
   ],
 
   Is_user_logged: null,

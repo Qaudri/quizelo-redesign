@@ -6,7 +6,7 @@
 
       <div >
         <div class="my-10">
-          <h1 class="text-4xl md:text-6xl font-bold text-center">FAQs</h1>
+          <h1 class="text-4xl md:text-6xl font-bold text-center my-2">FAQs</h1>
           <p class="text-gray-400 text-center font-normal md:text-base text-sm">Frequently Asked Questions.</p>
         </div>
       </div>
