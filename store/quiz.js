@@ -47,11 +47,20 @@ export const state = () => ({
     
   ],
 
-  current_question: ''
+  current_question: '',
+  answered_questions: '',
 })
 
 export const getters = {
   getQuizQuestion(state) {
     return state.questions[0]
+  }
+}
+
+export const actions = {
+  retrieveQuestionItems(context){
+    if (context.state.current_question === '') {
+      
+    }
   }
 }
