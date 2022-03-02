@@ -29,11 +29,20 @@ export const state = () => ({
 
     {
       id: 4,
-      question: "In development, what sign represents the mathematical sybol for multiplication?",
+      question: "In development, what sign represents the mathematical symbol for multiplication?",
       options: [
-        "A-# (Hash symbol)", "B-* (Asterisk)", "C-& (And symbol)", "D-x(Letter x)"
+        "A-# (Hash symbol)", "B-* (Asterisk)", "C-& (And symbol)", "D-x (Letter x)"
       ],
       right_option_index: 1,
+    },
+
+    {
+      id: 5,
+      question: "Which of the following is a CSS framework?",
+      options: [
+        "A-QaudriCSS", "B-Javascript", "C-TailwindCSS", "D-styles.css"
+      ],
+      right_option_index: 2,
     },
     
   ],
