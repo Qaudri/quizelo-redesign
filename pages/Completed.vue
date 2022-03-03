@@ -3,7 +3,7 @@
     <SectionsQuizcompleteOverlay :class="is_revealed ? 'hidden': '' " @viewResults="showResults" 
     class="absolute z-150 w-full bg-white" />
 
-    <SectionsQuizcompleteQuestioncard class="bg-white" />
+    <SectionsQuizcompleteQuestioncard :class="is_revealed ? 'block' : 'hidden' " class="bg-white" />
   </div>
 </template>
 

@@ -6,7 +6,7 @@
         <div class="">
 
           <div class="bg-accent1-300 bg-opacity-20 p-6 w-screen mx-auto">
-            <SectionsQuizQuestion :question="question.question"/>
+            <SectionsQuizQuestion :question="question.question"  />
           </div>
 
         </div>
