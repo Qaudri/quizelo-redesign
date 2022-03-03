@@ -1,6 +1,6 @@
 <template>
   <div class=" mx-auto">
-    <div class="my-6 flex justify-center">
+    <div class="my-10 flex justify-center">
       <div>
         <h1 class="font-bold text-6xl text-accent1-600">You scored {{score}}</h1>
         <p class="text-black font-medium text-lg text-center my-2">Here's the full breakdown</p>
@@ -71,10 +71,7 @@ import {mapGetters} from 'vuex';
 export default {
   data(){
    return{
-     score: {
-      //  type: String,
-       default: "5 / 5",
-     },
+     score: "5/5"
    } 
   },
   computed: {
