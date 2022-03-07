@@ -67,9 +67,25 @@ export const actions = {
   },
 
   retrieveNextQuestion(context){
-    context.commit("INCREASE_QUESTION_COUNTER");
-    context.commit ("SET_CURRENT_QUESTION", context.state.questions[context.state.question_counter])
-    
+    if (context.state.question_counter === (context.state.questions.length - 1)) {
+
+    }
+
+    else{
+      context.commit("INCREASE_QUESTION_COUNTER");
+      context.commit ("SET_CURRENT_QUESTION", context.state.questions[context.state.question_counter])
+    }
+  },
+
+  retrievePreviousQuestion(context){
+    if (context.state.question_counter === 0) {
+      
+    }
+
+    else{
+      context.commit("DECREASE_QUESTION_COUNTER");
+      context.commit ("SET_CURRENT_QUESTION", context.state.questions[context.state.question_counter])
+    }
   }
 }
 
@@ -81,5 +97,9 @@ export const mutations = {
 
   INCREASE_QUESTION_COUNTER(state){
     state.question_counter++
+  },
+
+  DECREASE_QUESTION_COUNTER(state){
+    state.question_counter--
   }
 }

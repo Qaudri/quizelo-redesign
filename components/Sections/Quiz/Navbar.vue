@@ -1,6 +1,7 @@
 <template>
   <div class="flex justify-between w-full items-center">
-    <div class="cursor-pointer flex items-center mt-2 bg-accent3-300 py-2 px-4 ease-in-out duration-500 hover:bg-transparent border-transparent hover:border-accent3-400 border-2">
+    <div @click="emitPreviousEvent"
+     class="cursor-pointer flex items-center mt-2 bg-accent3-300 py-2 px-4 ease-in-out duration-500 hover:bg-transparent border-transparent hover:border-accent3-400 border-2">
       <img :src="require('@/assets/images/backward.svg')" alt="" class="mr-2" />
       <p class="font-medium text-accent3-600">Previous</p>
     </div>
@@ -14,7 +15,7 @@
 
     </div>
 
-    <div class="flex">
+    <div @click="emitNextEvent" class="flex">
 
       <div class="cursor-pointer group">
 
@@ -52,19 +53,34 @@ export default {
 
   watch: {
 
-      countDown: {
-          handler(value) {
+    countDown: {
+      handler(value) {
 
-              if (value > 0) {
-                  setTimeout(() => {
-                      this.countDown--;
-                  }, 1000);
-              }
+        if (value > 0) {
+          setTimeout(() => {
+            this.countDown--;
+          }, 1000);
+        }
 
-          },
-          immediate: true // This ensures the watcher is triggered upon creation
-      }
+        else {
+          this.$emit("timeOver");
+          this.countDown = 30
+        }
 
+      },
+      immediate: true // This ensures the watcher is triggered upon creation
+    }
+
+  },
+
+  methods: {
+    emitNextEvent(){
+      this.$emit("NextQuestion")
+    },
+
+    emitPreviousEvent(){
+      this.$emit("PreviousQuestion")
+    }
   }
 }
 </script>

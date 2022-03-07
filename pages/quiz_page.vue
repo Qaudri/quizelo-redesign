@@ -18,7 +18,8 @@
         <div class="container mx-auto">
 
           <div class="my-4 w-full absolute bottom-0 px-6 md:px-0 flex justify-between container mx-auto">
-            <SectionsQuizNavbar />
+            <SectionsQuizNavbar @timeOver="showNextQuestion"
+            @PreviousQuestion="showPreviousQuestion" @NextQuestion="showNextQuestion" />
           </div>
 
         </div>
@@ -34,7 +35,7 @@ import {mapGetters, mapActions} from 'vuex';
 
 
 export default {
-
+  
   computed: {
     ...mapGetters({
       question : 'quiz/getQuizQuestion'
@@ -43,16 +44,26 @@ export default {
 
   methods: {
     ...mapActions({
-      retrieveQuestionItem: 'quiz/retrieveFirstQuestion'
-    })
+      retrieveQuestionItem: 'quiz/retrieveFirstQuestion',
+      retrieveNextQuestion: 'quiz/retrieveNextQuestion',
+      retrievePreviousQuestion: 'quiz/retrievePreviousQuestion'
+    }),
+
+    showNextQuestion(){
+      this.retrieveNextQuestion()
+    },
+
+    showPreviousQuestion(){
+      this.retrievePreviousQuestion()
+    }
   },
 
   created(){
     this.retrieveQuestionItem()
   }
 }
-</script>
 
+</script>
 <style>
 body{
   position: relative;
