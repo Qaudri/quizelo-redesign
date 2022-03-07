@@ -43,11 +43,11 @@ export default {
 
   methods: {
     ...mapActions({
-      retrieveQuestionItem: 'quiz/retrieveQuestionItem'
+      retrieveQuestionItem: 'quiz/retrieveFirstQuestion'
     })
   },
 
-  mounted(){
+  created(){
     this.retrieveQuestionItem()
   }
 }

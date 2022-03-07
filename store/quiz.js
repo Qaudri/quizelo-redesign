@@ -59,17 +59,17 @@ export const getters = {
 }
 
 export const actions = {
-  retrieveQuestionItem(context){
+  retrieveFirstQuestion(context){
     if(context.state.current_question === '') {
       context.commit ("SET_CURRENT_QUESTION", context.state.questions[0])
     }
-    
-    else {
-      context.commit("INCREASE_QUESTION_COUNTER");
-      context.commit ("SET_CURRENT_QUESTION", context.state.questions[context.state.question_counter])
-      
-    }
 
+  },
+
+  retrieveNextQuestion(context){
+    context.commit("INCREASE_QUESTION_COUNTER");
+    context.commit ("SET_CURRENT_QUESTION", context.state.questions[context.state.question_counter])
+    
   }
 }
 
