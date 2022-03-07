@@ -30,7 +30,7 @@
 
 <script>
 
-import {mapGetters} from 'vuex';
+import {mapGetters, mapActions} from 'vuex';
 
 
 export default {
@@ -39,6 +39,16 @@ export default {
     ...mapGetters({
       question : 'quiz/getQuizQuestion'
     })
+  },
+
+  methods: {
+    ...mapActions({
+      retrieveQuestionItem: 'quiz/retrieveQuestionItem'
+    })
+  },
+
+  mounted(){
+    this.retrieveQuestionItem()
   }
 }
 </script>

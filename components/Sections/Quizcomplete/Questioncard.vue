@@ -61,11 +61,17 @@
         <SectionsQuizAnswer :answers="question.options" />
       </div>
     </div>
+
+    <div>
+      <a href="/" class="py-2 px-4 bg-gradient-to-tr from-accent1-600 to-accent2-600 rounded-xl;">
+      Back to home page
+      </a>
+    </div>
   </div>
 </template>
 
 <script>
-import {mapGetters} from 'vuex';
+import {mapGetters, mapActions} from 'vuex';
 
 
 export default {
@@ -74,11 +80,14 @@ export default {
      score: "5/5"
    } 
   },
+
   computed: {
     ...mapGetters({
       question : 'quiz/getQuizQuestion'
     })
-  }
+  },
+
+
 }
 </script>
 

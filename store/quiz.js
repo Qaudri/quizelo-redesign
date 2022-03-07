@@ -54,21 +54,22 @@ export const state = () => ({
 
 export const getters = {
   getQuizQuestion(state) {
-    return state.questions[0]
+    return state.current_question
   }
 }
 
 export const actions = {
-  retrieveQuestionItems(context){
-    if (context.state.current_question === '') {
-      context.commit (SET_CURRENT_QUESTION, context.state.question[0])
+  retrieveQuestionItem(context){
+    if(context.state.current_question === '') {
+      context.commit ("SET_CURRENT_QUESTION", context.state.questions[0])
+    }
+    
+    else {
+      context.commit("INCREASE_QUESTION_COUNTER");
+      context.commit ("SET_CURRENT_QUESTION", context.state.questions[context.state.question_counter])
+      
     }
 
-    else{
-      context.commit(INCREASE_QUESTION_COUNTER)
-      context.commit (SET_CURRENT_QUESTION, context.state.question[context.state.question_counter])
-
-    }
   }
 }
 
