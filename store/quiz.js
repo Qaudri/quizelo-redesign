@@ -68,7 +68,7 @@ export const actions = {
 
   retrieveNextQuestion(context){
     if (context.state.question_counter === (context.state.questions.length - 1)) {
-
+      
     }
 
     else{
