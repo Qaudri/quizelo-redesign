@@ -3,46 +3,158 @@ export const state = () => ({
     {
       id: 1,
       question: "Who created the HTML language?",
+
       options: [
-        "A-Tim Bernerslee", "B-John Doe", "C-Tim Bernersly", "D-Chris Do"
+        {
+          option_tag: "A",
+          option_text: "Tim Bernerslee",
+          selected: false
+        },
+
+        {
+          option_tag: "B",
+          option_text: "John Doe",
+          selected: false
+        },
+
+        {
+          option_tag: "C",
+          option_text: "Tim Bernersly",
+          selected: false
+        },
+
+        {
+          option_tag: "D",
+          option_text: "Chris Do",
+          selected: false
+        },
       ],
-      right_option_index: 0,
+
+      correct_option_index: 0,
     },
 
     {
       id: 2,
       question: "In programming, what's the common practice sentence?",
       options: [
-        "A-Good morning", "B-Hello World!", "C-How are you?", "D-What's up?"
+        {
+          option_tag: "A",
+          option_text: "Good morning",
+          selected: false
+        },
+
+        {
+          option_tag: "B",
+          option_text: "Hello World!",
+          selected: false
+        },
+
+        {
+          option_tag: "C",
+          option_text: "How are you?",
+          selected: false
+        },
+
+        {
+          option_tag: "D",
+          option_text: "What's up?",
+          selected: false
+        },
       ],
-      right_option_index: 1,
+      correct_option_index: 1,
     },
 
     {
       id: 3,
       question: "Which of the following software supports team work?",
       options: [
-        "A-Canva", "B-Adobe Photoshop", "C-Flash", "D-Figma"
+        {
+          option_tag: "A",
+          option_text: "Canva",
+          selected: false
+        },
+
+        {
+          option_tag: "B",
+          option_text: "Adobe Photoshop",
+          selected: false
+        },
+
+        {
+          option_tag: "C",
+          option_text: "Flash",
+          selected: false
+        },
+
+        {
+          option_tag: "D",
+          option_text: "Figma",
+          selected: false
+        },
       ],
-      right_option_index: 3,
+      correct_option_index: 3,  
     },
 
     {
       id: 4,
       question: "In development, what sign represents the mathematical symbol for multiplication?",
       options: [
-        "A-# (Hash symbol)", "B-* (Asterisk)", "C-& (And symbol)", "D-x (Letter x)"
+        {
+          option_tag: "A",
+          option_text: "# (Hash symbol)",
+          selected: false
+        },
+
+        {
+          option_tag: "B",
+          option_text: "* (Asterisk)",
+          selected: false
+        },
+
+        {
+          option_tag: "C",
+          option_text: "& (And symbol)",
+          selected: false
+        },
+
+        {
+          option_tag: "D",
+          option_text: "x (Letter x)",
+          selected: false
+        },
       ],
-      right_option_index: 1,
+      correct_option_index: 1,  
     },
 
     {
       id: 5,
       question: "Which of the following is a CSS framework?",
       options: [
-        "A-QaudriCSS", "B-Javascript", "C-TailwindCSS", "D-styles.css"
+        {
+          option_tag: "A",
+          option_text: "QaudriCSS",
+          selected: false
+        },
+
+        {
+          option_tag: "B",
+          option_text: "Javascript",
+          selected: false
+        },
+
+        {
+          option_tag: "C",
+          option_text: "TailwindCSS",
+          selected: false
+        },
+
+        {
+          option_tag: "D",
+          option_text: "styles.css",
+          selected: false
+        },
       ],
-      right_option_index: 2,
+      correct_option_index: 2,  
     },
     
   ],

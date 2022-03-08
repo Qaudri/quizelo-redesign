@@ -1,35 +1,32 @@
 <template >
-  <div class="flex items-center justify-center h-screen">
-    <div class="flex md:h-screen-80 items-center">
-      
-      <div class="w-full">
-        <div class=""> 
-          <div class="container mx-auto relative flex h-fit justify-center mb-10">
-            <div class="w-full h-1 bg-accent1-600 flex items-center justify-center"></div>
-            <SectionsQuizNumberlist class="flex justify-between absolute w-full object-center" />
-          </div>
-
-          <div class="bg-accent1-300 bg-opacity-20 p-6 w-screen mx-auto">
-            <SectionsQuizQuestion :question="question.question"  />
-          </div>
-
+  <div class="flex items-center justify-center h-screen">      
+    <div class="w-full pt-6">
+      <div class=""> 
+        <div class="container mx-auto relative flex h-fit justify-center items-center mb-10 w-full h-1 bg-accent1-600">
+          <SectionsQuizNumberlist class="w-full flex justify-between absolute" />
         </div>
-        
-        <div class="px-6 md:px-0 container mx-auto my-20">
-          <SectionsQuizAnswer :answers="question.options" />
-        </div>
-        
-        <div class="container mx-auto">
 
-          <div class="my-4 w-full absolute bottom-0 px-6 md:px-0 flex justify-between container mx-auto">
-            <SectionsQuizNavbar @timeOver="showNextQuestion"
-            @PreviousQuestion="showPreviousQuestion" @NextQuestion="showNextQuestion" />
-          </div>
-
+        <div class="bg-accent1-300 bg-opacity-20 p-6 w-screen mx-auto">
+          <SectionsQuizQuestion :question="question.question"  />
         </div>
+
       </div>
-        
-    </div>  
+      
+      <div class="px-6 md:px-0 container mx-auto mt-14">
+        <SectionsQuizAnswer :answers="question.options" 
+         />
+      </div>
+      
+      <div class="container mx-auto">
+
+        <div class="mb-2 w-full absolute bottom-0 px-14 md:px-0 flex justify-between container mx-auto">
+          <SectionsQuizNavbar @timeOver="showNextQuestion"
+          @PreviousQuestion="showPreviousQuestion" @NextQuestion="showNextQuestion" />
+        </div>
+
+      </div>
+    </div>
+      
   </div>
 </template>
 
