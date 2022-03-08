@@ -1,6 +1,6 @@
 <template >
-  <div class="flex items-center justify-center h-screen">      
-    <div class="w-full pt-6">
+  <div class="flex justify-center h-screen">      
+    <div class="w-full my-20">
       <div class=""> 
         <div class="container mx-auto relative flex h-fit justify-center items-center mb-10 w-full h-1 bg-accent1-600">
           <SectionsQuizNumberlist class="w-full flex justify-between absolute" />
@@ -19,7 +19,7 @@
       
       <div class="container mx-auto">
 
-        <div class="mb-2 w-full absolute bottom-0 px-14 md:px-0 flex justify-between container mx-auto">
+        <div class="mb-4 w-full absolute bottom-0 px-14 md:px-0 flex justify-between container mx-auto">
           <SectionsQuizNavbar @timeOver="showNextQuestion"
           @PreviousQuestion="showPreviousQuestion" @NextQuestion="showNextQuestion" />
         </div>
