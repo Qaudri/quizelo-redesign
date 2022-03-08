@@ -3,7 +3,11 @@
     <div class="flex md:h-screen-80 items-center">
       
       <div class="w-full">
-        <div class="">
+        <div class=""> 
+          <div class="container mx-auto relative flex h-fit justify-center mb-10">
+            <div class="w-full h-1 bg-accent1-600 flex items-center justify-center"></div>
+            <SectionsQuizNumberlist class="flex justify-between absolute w-full object-center" />
+          </div>
 
           <div class="bg-accent1-300 bg-opacity-20 p-6 w-screen mx-auto">
             <SectionsQuizQuestion :question="question.question"  />
