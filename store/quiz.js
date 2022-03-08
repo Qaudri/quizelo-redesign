@@ -198,6 +198,10 @@ export const actions = {
       context.commit("DECREASE_QUESTION_COUNTER");
       context.commit ("SET_CURRENT_QUESTION", context.state.questions[context.state.question_counter])
     }
+  },
+
+  chooseOption(context, options){
+    console.log(option)
   }
 }
 

@@ -13,7 +13,7 @@
       </div>
       
       <div class="px-6 md:px-0 container mx-auto mt-14">
-        <SectionsQuizAnswer :answers="question.options" 
+        <SectionsQuizAnswer :answers="question.options" @OptionChosen="userChooseOption(index)" 
          />
       </div>
       
@@ -47,7 +47,8 @@ export default {
     ...mapActions({
       retrieveQuestionItem: 'quiz/retrieveFirstQuestion',
       retrieveNextQuestion: 'quiz/retrieveNextQuestion',
-      retrievePreviousQuestion: 'quiz/retrievePreviousQuestion'
+      retrievePreviousQuestion: 'quiz/retrievePreviousQuestion',
+      chooseOption: 'quiz/chooseOption'
     }),
 
     showNextQuestion(){
@@ -56,8 +57,14 @@ export default {
 
     showPreviousQuestion(){
       this.retrievePreviousQuestion()
+    },
+
+    userChooseOption(option){
+      this.chooseOption(option)
     }
   },
+
+
 
   created(){
     this.retrieveQuestionItem()
