@@ -160,7 +160,7 @@ export const state = () => ({
   ],
 
   current_question: '',
-  answered_questions: '',
+  answered_questions: [],
   question_counter: 0
 })
 
@@ -180,7 +180,6 @@ export const actions = {
 
   retrieveNextQuestion(context){
     if (context.state.question_counter === (context.state.questions.length - 1)) {
-      
     }
 
     else{
@@ -200,8 +199,10 @@ export const actions = {
     }
   },
 
-  chooseOption(context, options){
-    console.log(option)
+  chooseOption(context, data){
+    console.log(data)
+
+    context.commit("ADD_TO_ANSWERED_QUESTIONS", data)
   }
 }
 
@@ -217,5 +218,13 @@ export const mutations = {
 
   DECREASE_QUESTION_COUNTER(state){
     state.question_counter--
+  },
+
+  ADD_TO_ANSWERED_QUESTIONS(state, payload){
+    state.answered_questions.push({
+      question_id: payload.question.id,
+      question_correct_answer_index: payload.question.correct_option_index,
+      user_selected_option_index: payload.selected_answer
+    })
   }
 }

@@ -13,7 +13,7 @@
       </div>
       
       <div class="px-6 md:px-0 container mx-auto mt-14">
-        <SectionsQuizAnswer :answers="question.options" @OptionChosen="userChooseOption(index)" 
+        <SectionsQuizAnswer :answers="question.options" @OptionChosen="userChooseOption" 
          />
       </div>
       
@@ -59,12 +59,13 @@ export default {
       this.retrievePreviousQuestion()
     },
 
-    userChooseOption(option){
-      this.chooseOption(option)
+    userChooseOption(user_selected_option){
+      this.chooseOption({
+        question: this.question,
+        selected_answer: user_selected_option,
+      })
     }
   },
-
-
 
   created(){
     this.retrieveQuestionItem()
