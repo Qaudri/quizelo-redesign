@@ -2,6 +2,10 @@
   <div class="flex justify-center h-screen">      
     <div class="w-full my-20">
       <div class=""> 
+        <div class="">
+          <SectionsQuizHeader class=" top-0 w-full" />
+        </div>
+
         <div class="container mx-auto relative flex h-fit justify-center items-center mb-10 w-full h-1 bg-accent1-600">
           <SectionsQuizNumberlist class="w-full flex justify-between absolute" />
         </div>
@@ -29,7 +33,7 @@
         </div>
 
       </div>
-      
+
     </div>
       
   </div>
