@@ -196,27 +196,34 @@ export const getters = {
         answered_question.question_id === state.current_question.id
       )
 
-      let modifiedOptions = state.current_question.options.map(option => {
-        let tempOption = Object.assign({}, option);
+      let modifiedOptions
 
-        if (option.option_id === answeredQuestionDetails.user_selected_option_id) {
-          tempOption.selected = true
-        }
+      if (answeredQuestionDetails) {
 
-        else {
-          tempOption.selected = false
-        }
+        modifiedOptions = state.current_question.options.map(option => {
+          let tempOption = Object.assign({}, option);
+  
+          if (option.option_id === answeredQuestionDetails.user_selected_option_id) {
+            tempOption.selected = true
+          }
+  
+          else {
+            tempOption.selected = false
+          }
+  
+          return tempOption;
+  
+        });
+      }
 
-        return tempOption;
 
-      });
 
       let modifiedQuestion = {};
 
       modifiedQuestion.question = state.current_question.question;
       modifiedQuestion.id = state.current_question.id;
       modifiedQuestion.correct_option_index = state.current_question.correct_option_index;
-      modifiedQuestion.options = modifiedOptions
+      modifiedQuestion.options = answeredQuestionDetails ? modifiedOptions : state.current_question.options
 
 
       return modifiedQuestion;
