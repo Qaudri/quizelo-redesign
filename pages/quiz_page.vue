@@ -12,9 +12,13 @@
 
       </div>
       
-      <div class="px-6 md:px-0 container mx-auto mt-14">
-        <SectionsQuizAnswer :answers="question.options" @OptionChosen="userChooseOption" 
-         />
+      <!-- <div class="px-6 md:px-0 container mx-auto mt-14">
+        <SectionsQuizAnswer :answers="question.options" @OptionChosen="userChooseOption" />
+      </div> -->
+
+      <div class="px-6 md:px-0 grid grid-cols-2 container mx-auto gap-6 mt-14">
+        <SectionsQuizAnswer2  @OptionChosen="userChooseOption(answer)" v-for="answer in question.options" :key="answer.option_id"
+        :selected="answer.selected" :option_text="answer.option_text" :option_tag="answer.option_tag" />
       </div>
       
       <div class="container mx-auto">
@@ -25,6 +29,7 @@
         </div>
 
       </div>
+      
     </div>
       
   </div>
@@ -36,10 +41,12 @@ import {mapGetters, mapActions} from 'vuex';
 
 
 export default {
-  
+
   computed: {
     ...mapGetters({
-      question : 'quiz/getQuizQuestion'
+      question : 'quiz/getQuestion',
+      question2 : 'quiz/getQuestion'
+
     })
   },
 
@@ -60,9 +67,11 @@ export default {
     },
 
     userChooseOption(user_selected_option){
+      console.log("Clicked")
+      
       this.chooseOption({
         question: this.question,
-        selected_answer: user_selected_option,
+        selected_option: user_selected_option,
       })
     }
   },
