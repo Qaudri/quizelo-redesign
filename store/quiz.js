@@ -216,8 +216,6 @@ export const getters = {
         });
       }
 
-
-
       let modifiedQuestion = {};
 
       modifiedQuestion.question = state.current_question.question;
@@ -287,20 +285,19 @@ export const mutations = {
 
   ADD_TO_ANSWERED_QUESTIONS(state, payload){
 
-    let getEntryAlreadyExists = state.answered_questions.find(answered_question =>
-      answered_question.question_id === payload.question.id  
-    )
+    for (let i = 0; i < state.answered_questions.length; i++ ){
+      let obj = state.answered_questions[i];
 
-    if (getEntryAlreadyExists) {
-      console.log("Already Exists")
-    } else{
-      state.answered_questions.push({
-        question_id: payload.question.id,
-        question_correct_option_index: payload.question.correct_option_index,
-        user_selected_option_id: payload.selected_option.option_id
-      })
+      if (obj.question_id == payload.question.id){
+        state.answered_questions.splice(i, 1);
+      }
     }
 
+    state.answered_questions.push({
+      question_id: payload.question.id,
+      question_correct_option_index: payload.question.correct_option_index,
+      user_selected_option_id: payload.selected_option.option_id
+    })
 
   }
 }
