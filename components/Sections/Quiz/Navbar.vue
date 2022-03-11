@@ -76,10 +76,12 @@ export default {
   methods: {
     emitNextEvent(){
       this.$emit("NextQuestion")
+      this.countDown = 30
     },
 
     emitPreviousEvent(){
       this.$emit("PreviousQuestion")
+      this.countDown = 30
     }
   }
 }
