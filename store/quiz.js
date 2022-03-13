@@ -290,7 +290,7 @@ export const mutations = {
 
       if (obj.question_id == payload.question.id){
         state.answered_questions.splice(i, 1);
-      }
+      }""
     }
 
     state.answered_questions.push({
