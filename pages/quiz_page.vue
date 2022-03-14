@@ -5,7 +5,8 @@
       <SectionsQuizHeader class="" @ModalDialog="openDialog" />
     </div>
 
-    <SectionsQuizDialog :class="dialog_open ? 'block z-150 top-0' : 'hidden' " @closeDialog="closeDialog"/>
+    <SectionsQuizDialog @SubmitQuiz="submitQuiz"
+    :class="dialog_open ? 'block z-150 top-0' : 'hidden' " @closeDialog="closeDialog"/>
 
     <div class="w-full flex justify-center items-center">
       <div class=""> 
@@ -88,7 +89,11 @@ export default {
 
     closeDialog(){
       this.dialog_open = false
-    }
+    },
+
+    submitQuiz(){
+      this.$router.push({name:'summary'})
+    },
   },
 
   created(){

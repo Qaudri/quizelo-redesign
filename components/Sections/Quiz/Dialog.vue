@@ -24,7 +24,7 @@
 
             <p class="text-black font-medium text-xl text-center max-w-sm flex justify-center">Are you sure you want to submit? This action is irreversible!</p>
 
-            <a href="/summary"
+            <a href="#" @click="emitSubmitEvent"
             class="flex items-center justify-center cursor-pointer mt-6 bg-gradient-to-r from-accent1-500 to-accent2-500 text-lg  px-7 py-3 uppercase text-white rounded-lg font-medium">
             Submit
             </a>
@@ -50,6 +50,10 @@ export default {
   methods: {
     emitCloseEvent(){
       this.$emit('closeDialog')
+    },
+
+    emitSubmitEvent(){
+      this.$emit('SubmitQuiz')
     }
   }
 }
