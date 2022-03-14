@@ -222,7 +222,7 @@ export const getters = {
 
       modifiedQuestion.question = state.current_question.question;
       modifiedQuestion.id = state.current_question.id;
-      modifiedQuestion.correct_option_index = state.current_question.correct_option_index;
+      modifiedQuestion.correct_option_index = state.current_question.correct_option_id;
       modifiedQuestion.options = answeredQuestionDetails ? modifiedOptions : state.current_question.options
 
 
@@ -301,8 +301,11 @@ export const mutations = {
 
     state.answered_questions.push({
       question_id: payload.question.id,
-      question_correct_option_index: payload.question.correct_option_index,
-      user_selected_option_id: payload.selected_option.option_id
+      question_correct_option_id: payload.question.correct_option_id,
+      question_text: payload.question.question,
+      user_selected_option_id: payload.selected_option.option_id,
+      user_selected_option_value: payload.selected_option.option_text,
+      user_selected_option_tag: payload.selected_option.option_tag
     })
 
   },
@@ -328,7 +331,6 @@ export const mutations = {
         })
       }
     })
-
 
   }
 }
