@@ -1,7 +1,7 @@
 <template>
   <div class=" absolute bg-accent3-600 bg-opacity-80 flex items-center justify-center h-full w-full">
 
-    <div class="bg-white rounded-xl p-6 h-1/2 w-1/2">
+    <div class="bg-white rounded-xl p-6 pb-0">
 
       <div>
         <div class="border-b text-xl pb-4 font-semibold flex justify-between">
@@ -24,6 +24,10 @@
 
             <p class="text-black font-medium text-xl text-center max-w-sm flex justify-center">Are you sure you want to submit? This action is irreversible!</p>
 
+            <a href="#"
+            class="flex items-center justify-center cursor-pointer mt-6 bg-gradient-to-r from-accent1-500 to-accent2-500 text-lg  px-7 py-3 uppercase text-white rounded-lg font-medium">
+            Submit
+            </a>
           </div>
 
         </div>
