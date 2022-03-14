@@ -179,6 +179,8 @@ export const state = () => ({
     
   ],
 
+  final_score: 0,
+  quiz_summary: [],
   current_question: '',
   answered_questions: [],
   question_counter: 0
