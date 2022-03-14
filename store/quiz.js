@@ -34,7 +34,7 @@ export const state = () => ({
         },
       ],
 
-      correct_option_index: 0,
+      correct_option_id: 0,
     },
 
     {
@@ -69,7 +69,7 @@ export const state = () => ({
           selected: false
         },
       ],
-      correct_option_index: 1,
+      correct_option_id: 1,
     },
 
     {
@@ -104,7 +104,7 @@ export const state = () => ({
           selected: false
         },
       ],
-      correct_option_index: 3,  
+      correct_option_id: 3,  
     },
 
     {
@@ -139,7 +139,7 @@ export const state = () => ({
           selected: false
         },
       ],
-      correct_option_index: 1,  
+      correct_option_id: 1,  
     },
 
     {
@@ -174,7 +174,7 @@ export const state = () => ({
           selected: false
         },
       ],
-      correct_option_index: 2,  
+      correct_option_id: 2,  
     },
     
   ],
@@ -268,7 +268,11 @@ export const actions = {
     // console.log(data)
 
     context.commit("ADD_TO_ANSWERED_QUESTIONS", data)
-  }
+  },
+
+  evaluateQuiz(context){
+    context.commit("REVIEW_USER_OPTIONS")
+  },
 }
 
 
@@ -300,6 +304,31 @@ export const mutations = {
       question_correct_option_index: payload.question.correct_option_index,
       user_selected_option_id: payload.selected_option.option_id
     })
+
+  },
+
+  REVIEW_USER_OPTIONS(state){
+    const summary = {
+
+
+    }
+
+    let reviewed_questions = state.questions.map(question => {
+
+      let theQuestionAnswer = state.answered_questions.find(answered_question =>
+        answered_question.question_id === question.id
+      )
+
+      if (question.correct_option_id == theQuestionAnswer.user_selected_option_id) {
+        state.quiz_summary.push({
+          question: question.question,
+          user_selected_option: theQuestionAnswer.user_selected_option_id,
+          correct_option: "The correct option",
+          is_user_option_correct: true
+        })
+      }
+    })
+
 
   }
 }
