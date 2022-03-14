@@ -62,8 +62,8 @@
       </div>
     </div>
 
-    <div class="flex items-center mx-auto">
-      <a href="/" class="py-2 px-4 bg-gradient-to-tr from-accent1-600 to-accent2-600 rounded-xl;">
+    <div class="flex items-center mx-auto my-4">
+      <a href="/" class="mx-auto py-2 px-4 bg-gradient-to-tr from-accent1-600 to-accent2-500 rounded-xl text-white text-lg font-medium">
       Back to home page
       </a>
     </div>
