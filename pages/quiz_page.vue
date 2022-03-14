@@ -5,7 +5,7 @@
       <SectionsQuizHeader class="" @ModalDialog="openDialog" />
     </div>
 
-    <SectionsQuizSimple :class="dialog_open ? 'block z-150 top-0' : 'hidden' " @closeDialog="closeDialog"/>
+    <SectionsQuizDialog :class="dialog_open ? 'block z-150 top-0' : 'hidden' " @closeDialog="closeDialog"/>
 
     <div class="w-full flex justify-center items-center">
       <div class=""> 
