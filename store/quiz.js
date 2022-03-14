@@ -312,7 +312,7 @@ export const mutations = {
     state.answered_questions.push({
       question_id: payload.question.id,
       question_correct_option_id: payload.question.correct_option_id,
-      question_correct_option_value: payload.question.correct_option_value,
+      question_correct_value: payload.question.correct_option_value,
       question_text: payload.question.question,
       user_selected_option_id: payload.selected_option.option_id,
       user_selected_option_value: payload.selected_option.option_text,
@@ -335,7 +335,7 @@ export const mutations = {
             id: question.id,
             question: question.question,
             user_selected_option: theQuestionAnswer.user_selected_option_value,
-            question_correct_value: theQuestionAnswer.question.correct_option_value,
+            question_correct_value: theQuestionAnswer.correct_option_value,
 
             is_user_option_correct: true,
           })
@@ -348,7 +348,7 @@ export const mutations = {
             id: question.id,
             question: question.question,
             user_selected_option: theQuestionAnswer.user_selected_option_value,
-            question_correct_value: theQuestionAnswer.question.correct_option_value,
+            question_correct_value: theQuestionAnswer.correct_option_value,
             is_user_option_correct: false,
           })
         }

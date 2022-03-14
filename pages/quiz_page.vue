@@ -64,6 +64,8 @@ export default {
       retrieveNextQuestion: 'quiz/retrieveNextQuestion',
       retrievePreviousQuestion: 'quiz/retrievePreviousQuestion',
       chooseOption: 'quiz/chooseOption',
+      evaluateQuiz: 'quiz/evaluateQuiz',
+
     }),
 
     showNextQuestion(){
@@ -92,7 +94,7 @@ export default {
     },
 
     submitQuiz(){
-      this.evaluteQuiz()
+      this.evaluateQuiz()
       this.$router.push({name:'summary'})
     },
   },

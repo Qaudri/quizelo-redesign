@@ -61,9 +61,6 @@ export default {
   },
 
   methods: {
-    ...mapActions({
-        evaluateQuiz: 'quiz/evaluateQuiz',
-    }),
 
     emitCloseEvent(){
       this.$emit('closeDialog')
@@ -73,10 +70,6 @@ export default {
       this.$emit('SubmitQuiz')
     },
 
-    evaluteQuiz(){
-
-    }
-  
 
   }
 
