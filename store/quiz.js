@@ -34,7 +34,9 @@ export const state = () => ({
         },
       ],
 
-      correct_option_id: 0,
+      correct_option_id: 1,
+      correct_option_value: "Tim Bernerslee",
+
     },
 
     {
@@ -69,7 +71,9 @@ export const state = () => ({
           selected: false
         },
       ],
-      correct_option_id: 1,
+      correct_option_id: 2,
+      correct_option_value: "Hello World!",
+
     },
 
     {
@@ -104,7 +108,9 @@ export const state = () => ({
           selected: false
         },
       ],
-      correct_option_id: 3,  
+      correct_option_id: 4,  
+      correct_option_value: "Figma",
+
     },
 
     {
@@ -139,7 +145,9 @@ export const state = () => ({
           selected: false
         },
       ],
-      correct_option_id: 1,  
+      correct_option_id: 2, 
+      correct_option_value: "* (Asterisk)",
+ 
     },
 
     {
@@ -174,7 +182,9 @@ export const state = () => ({
           selected: false
         },
       ],
-      correct_option_id: 2,  
+      correct_option_id: 3,  
+      correct_option_value: "TailwindCSS",
+
     },
     
   ],
@@ -302,34 +312,51 @@ export const mutations = {
     state.answered_questions.push({
       question_id: payload.question.id,
       question_correct_option_id: payload.question.correct_option_id,
+      question_correct_option_value: payload.question.correct_option_value,
       question_text: payload.question.question,
       user_selected_option_id: payload.selected_option.option_id,
       user_selected_option_value: payload.selected_option.option_text,
-      user_selected_option_tag: payload.selected_option.option_tag
     })
 
   },
 
   REVIEW_USER_OPTIONS(state){
-    const summary = {
 
-
-    }
-
-    let reviewed_questions = state.questions.map(question => {
+    state.questions.map(question => {
 
       let theQuestionAnswer = state.answered_questions.find(answered_question =>
         answered_question.question_id === question.id
       )
 
-      if (question.correct_option_id == theQuestionAnswer.user_selected_option_id) {
-        state.quiz_summary.push({
-          question: question.question,
-          user_selected_option: theQuestionAnswer.user_selected_option_id,
-          correct_option: "The correct option",
-          is_user_option_correct: true
-        })
+      if (theQuestionAnswer) {
+
+        if (question.correct_option_id == theQuestionAnswer.user_selected_option_id) {
+          state.quiz_summary.push({
+            id: question.id,
+            question: question.question,
+            user_selected_option: theQuestionAnswer.user_selected_option_value,
+            question_correct_value: theQuestionAnswer.question.correct_option_value,
+
+            is_user_option_correct: true,
+          })
+  
+          state.final_score++
+        }
+  
+        else {
+          state.quiz_summary.push({
+            id: question.id,
+            question: question.question,
+            user_selected_option: theQuestionAnswer.user_selected_option_value,
+            question_correct_value: theQuestionAnswer.question.correct_option_value,
+            is_user_option_correct: false,
+          })
+        }
+      } else{
+        console.log("option not available for question")
       }
+
+
     })
 
   }

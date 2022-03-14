@@ -63,7 +63,7 @@ export default {
       retrieveQuestionItem: 'quiz/retrieveFirstQuestion',
       retrieveNextQuestion: 'quiz/retrieveNextQuestion',
       retrievePreviousQuestion: 'quiz/retrievePreviousQuestion',
-      chooseOption: 'quiz/chooseOption'
+      chooseOption: 'quiz/chooseOption',
     }),
 
     showNextQuestion(){
@@ -75,12 +75,12 @@ export default {
     },
 
     userChooseOption(user_selected_option){
-      console.log("Clicked")
       
       this.chooseOption({
         question: this.question,
         selected_option: user_selected_option,
       })
+
     },
 
     openDialog(){
@@ -92,6 +92,7 @@ export default {
     },
 
     submitQuiz(){
+      this.evaluteQuiz()
       this.$router.push({name:'summary'})
     },
   },

@@ -39,6 +39,11 @@
 </template>
 
 <script>
+
+import {mapGetters, mapActions} from 'vuex';
+
+
+
 export default {
   props: {
     openDialog: Boolean,
@@ -47,15 +52,35 @@ export default {
 
   },
 
+    computed: {
+    ...mapGetters({
+      question : 'quiz/getQuestion',
+      question2 : 'quiz/getQuestion'
+
+    })
+  },
+
   methods: {
+    ...mapActions({
+        evaluateQuiz: 'quiz/evaluateQuiz',
+    }),
+
     emitCloseEvent(){
       this.$emit('closeDialog')
     },
 
     emitSubmitEvent(){
       this.$emit('SubmitQuiz')
+    },
+
+    evaluteQuiz(){
+
     }
+  
+
   }
+
+
 }
 </script>
 
