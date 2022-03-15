@@ -10,57 +10,16 @@
       <div class="">
 
         <div class="bg-accent1-300 bg-opacity-20 p-6 w-screen mx-auto">
-          <SectionsQuizQuestion :question="question.question"  />
+          <SectionsQuizQuestion v-for="question in question" :key="question.id" :question="question.question"  />
         </div>
 
       </div>
       
       <div class="px-6 md:px-0 container mx-auto my-20">
-        <SectionsQuizAnswer :answers="question.options" />
+        <SectionsQuizAnswer v-for="answer in question.options" :key="answer.option_id" :answers="question.options" />
       </div>
     </div>
 
-    <div class="my-6">
-      <div class="">
-
-        <div class="bg-accent1-300 bg-opacity-20 p-6 w-screen mx-auto">
-          <SectionsQuizQuestion :question="question.question"  />
-        </div>
-
-      </div>
-      
-      <div class="px-6 md:px-0 container mx-auto my-20">
-        <SectionsQuizAnswer :answers="question.options" />
-      </div>
-    </div>
-
-    <div class="my-6">
-      <div class="">
-
-        <div class="bg-accent1-300 bg-opacity-20 p-6 w-screen mx-auto">
-          <SectionsQuizQuestion :question="question.question"  />
-        </div>
-
-      </div>
-      
-      <div class="px-6 md:px-0 container mx-auto my-20">
-        <SectionsQuizAnswer :answers="question.options" />
-      </div>
-    </div>
-
-    <div class="my-6">
-      <div class="">
-
-        <div class="bg-accent1-300 bg-opacity-20 p-6 w-screen mx-auto">
-          <SectionsQuizQuestion :question="question.question"  />
-        </div>
-
-      </div>
-      
-      <div class="px-6 md:px-0 container mx-auto my-20">
-        <SectionsQuizAnswer :answers="question.options" />
-      </div>
-    </div>
 
     <div class="flex items-center mx-auto my-4">
       <a href="/" class="mx-auto py-2 px-4 bg-gradient-to-tr from-accent1-600 to-accent2-500 rounded-xl text-white text-lg font-medium">
@@ -83,7 +42,8 @@ export default {
 
   computed: {
     ...mapGetters({
-      question : 'quiz/getQuizQuestion'
+      question : 'quiz/getQuizQuestion',
+      quizSummary: 'quiz/getQuizSummary'
     })
   },
 

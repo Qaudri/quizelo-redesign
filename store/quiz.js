@@ -209,6 +209,10 @@ export const getters = {
     return state.final_score
   },
 
+  getQuizSummary(state){
+    return state.quiz_summary
+  },
+
   getQuestion(state){
     if (state.answered_questions.length) {
       
