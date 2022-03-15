@@ -232,7 +232,8 @@ export const getters = {
 
       modifiedQuestion.question = state.current_question.question;
       modifiedQuestion.id = state.current_question.id;
-      modifiedQuestion.correct_option_index = state.current_question.correct_option_id;
+      modifiedQuestion.correct_option_id = state.current_question.correct_option_id;
+      modifiedQuestion.correct_option_value = state.current_question.correct_option_value;
       modifiedQuestion.options = answeredQuestionDetails ? modifiedOptions : state.current_question.options
 
 
@@ -322,7 +323,7 @@ export const mutations = {
 
   REVIEW_USER_OPTIONS(state){
 
-    state.questions.map(question => {
+    state.questions.forEach(question => {
 
       let theQuestionAnswer = state.answered_questions.find(answered_question =>
         answered_question.question_id === question.id

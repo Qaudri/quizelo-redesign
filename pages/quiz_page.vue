@@ -5,7 +5,7 @@
       <SectionsQuizHeader class="" @ModalDialog="openDialog" />
     </div>
 
-    <SectionsQuizDialog @SubmitQuiz="submitQuiz"
+    <SectionsQuizDialog @ConfirmSubmit="submitQuiz"
     :class="dialog_open ? 'block z-150 top-0' : 'hidden' " @closeDialog="closeDialog"/>
 
     <div class="w-full flex justify-center items-center">

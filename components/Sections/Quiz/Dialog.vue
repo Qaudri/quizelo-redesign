@@ -67,7 +67,7 @@ export default {
     },
 
     emitSubmitEvent(){
-      this.$emit('SubmitQuiz')
+      this.$emit('ConfirmSubmit')
     },
 
 

@@ -1,6 +1,6 @@
 <template>
 
-  <body>
+  <div>
 
     <section class="h-screen w-full items-center flex justify-center">
       <div
@@ -13,7 +13,7 @@
 
         <form class="py-2">
           <input placeholder="Enter your name to start"
-            class="select-none my-6 text-xl w-full border-b border-gray-400 outline-none text-center p-4" />
+          class="select-none my-6 text-xl w-full border-b border-gray-400 outline-none text-center p-4" />
 
           <div class="w-full flex items-center justify-center">
             <nuxt-link to="/quiz_page" class="flex justify-center font-medium uppercase text-white py-4 w-full bg-gradient-to-r from-accent1-500 to-accent2-500 cursor-pointer rounded-lg">
@@ -34,7 +34,7 @@
       </div>
     </section>
 
-  </body>
+  </div>
 </template>
 
 
