@@ -201,6 +201,14 @@ export const getters = {
     return state.current_question
   },
 
+  getOverallQuestionNo(state){
+    return state.question.length
+  },
+
+  getFinalScore(state){
+    return state.final_score
+  },
+
   getQuestion(state){
     if (state.answered_questions.length) {
       
@@ -243,7 +251,7 @@ export const getters = {
     }else{
       return state.current_question
     }
-  }
+  },
 }
 
 export const actions = {
