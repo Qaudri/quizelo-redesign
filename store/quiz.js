@@ -202,7 +202,7 @@ export const getters = {
   },
 
   getOverallQuestionNo(state){
-    return state.question.length
+    return state.questions.length
   },
 
   getFinalScore(state){
