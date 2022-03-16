@@ -347,9 +347,8 @@ export const mutations = {
           state.quiz_summary.push({
             id: question.id,
             question: question.question,
-            user_selected_option: theQuestionAnswer.user_selected_option_value,
-            question_correct_value: theQuestionAnswer.correct_option_value,
-
+            user_selected_option_value: theQuestionAnswer.user_selected_option_value,
+            question_correct_value: theQuestionAnswer.question_correct_value,
             is_user_option_correct: true,
           })
   
@@ -360,13 +359,19 @@ export const mutations = {
           state.quiz_summary.push({
             id: question.id,
             question: question.question,
-            user_selected_option: theQuestionAnswer.user_selected_option_value,
-            question_correct_value: theQuestionAnswer.correct_option_value,
+            user_selected_option_value: theQuestionAnswer.user_selected_option_value,
+            question_correct_value: theQuestionAnswer.question_correct_value,
             is_user_option_correct: false,
           })
         }
       } else{
-        console.log("option not available for question")
+        state.quiz_summary.push({
+          id: question.id,
+          question: question.question,
+          user_selected_option_value: "Not answered",
+          question_correct_value: question.correct_option_value,
+          is_user_option_correct: false,
+        })      
       }
 
 

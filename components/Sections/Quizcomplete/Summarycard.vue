@@ -11,8 +11,10 @@
       </div>
     </div>
 
-    <div class="flex justify-between px-4 py-6 bg-accent3-200">
-      <SectionsQuizcompleteQuestion v-for="question in quizSummary" :key="id" />
+    <div class="px-4 py-6 bg-accent3-200">
+      <SectionsQuizcompleteSummary v-for="(quiz, index) in quizSummary" :key="index"
+      :theQuestion="quiz.question" :is_correct="quiz.is_user_option_correct" 
+      :correct_option="quiz.question_correct_value" :choosen_option="quiz.user_selected_option_value" />
     </div>
 
     <div class="flex items-center mx-auto my-4">
@@ -36,7 +38,6 @@ export default {
       questionNo: 'quiz/getOverallQuestionNo'
     })
   },
-
 
 }
 </script>
