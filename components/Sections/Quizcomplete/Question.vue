@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div>
-      <div>
+    <div class="flex">
+      <div class="w-10">
         <img :src="require('@/assets/images/correct.svg')" alt="">
         <img :src="require('@/assets/images/wrong.svg')" alt="">
       </div>
