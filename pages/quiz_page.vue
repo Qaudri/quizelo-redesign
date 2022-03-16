@@ -11,7 +11,7 @@
     <div class="w-full flex justify-center items-center">
       <div class=""> 
 
-        <SectionsQuizQuestionselector @changeQuestion="switchQuestion"
+        <SectionsQuizQuestionselector @changeQuestion="switchQuestion" 
          :question_no="questionNo" class="w-full container mx-auto overflow-x-hidden flex justify-center my-6" />
 
         <div class="bg-accent1-300 bg-opacity-20 p-6 w-screen mx-auto">
