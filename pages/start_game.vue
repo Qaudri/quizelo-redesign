@@ -16,13 +16,10 @@
           class="select-none my-6 text-xl w-full border-b border-gray-400 outline-none text-center p-4" />
 
           <div class="w-full flex items-center justify-center">
-            <nuxt-link to="/quiz_page" class="flex justify-center font-medium uppercase text-white py-4 w-full bg-gradient-to-r from-accent1-500 to-accent2-500 cursor-pointer rounded-lg">
+            <a href="/quiz_page" class="flex justify-center font-medium uppercase text-white py-4 w-full bg-gradient-to-r from-accent1-500 to-accent2-500 cursor-pointer rounded-lg">
               Start
-            </nuxt-link>
+            </a>
           </div>
-
-          
-          
         </form>
         
         <a

@@ -11,9 +11,8 @@
       </div>
     </div>
 
-    <div class="px-2 py-6 bg-accent3-200">
-      <SectionsQuizCompleteQuestion />
-      <SectionsQuizCompleteAnswer />
+    <div class="flex justify-between px-4 py-6 bg-accent3-200">
+      <SectionsQuizcompleteQuestion v-for="question in quizSummary" :key="id" />
     </div>
 
     <div class="flex items-center mx-auto my-4">
@@ -25,8 +24,8 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex';
 
+import {mapGetters} from 'vuex';
 
 export default {
 
