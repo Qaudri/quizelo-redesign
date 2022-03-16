@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="select-none">
     <SectionsQuizcompleteOverlay :class="is_revealed ? 'hidden': '' " @viewResults="showResults" 
     class="absolute z-150 w-full bg-white" />
 

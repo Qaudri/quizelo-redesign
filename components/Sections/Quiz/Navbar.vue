@@ -1,5 +1,6 @@
 <template>
-  <div class="flex justify-between w-full items-center">
+  <div class="select-none flex justify-between w-full items-center">
+    
     <div @click="emitPreviousEvent"
      class="cursor-pointer flex items-center mt-2 bg-accent3-300 py-2 px-4 ease-in-out duration-500 hover:bg-transparent border-transparent hover:border-accent3-400 border-2">
       <img :src="require('@/assets/images/backward.svg')" alt="" class="mr-2" />

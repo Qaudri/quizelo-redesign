@@ -11,7 +11,7 @@
         </div>
       
 
-        <form class="py-2">
+        <form @submit.prevent="FillUsername" class="py-2">
           <input placeholder="Enter your name to start"
           class="select-none my-6 text-xl w-full border-b border-gray-400 outline-none text-center p-4" />
 
@@ -38,11 +38,22 @@
 
 <script>
 export default {
-  name: 'IndexPage',
+
+  data(){
+    return{
+      form: '',
+    }
+  },
 
   methods:{
-    pushLink(){
-      this.$router.push({path: '/quiz_page'})
+    validateInput(){
+      if (this.form = '') {
+        console.log("Please enter you name")
+      }
+    },
+
+    FillUsername(){
+      this.validateInput()
     }
   }
 }

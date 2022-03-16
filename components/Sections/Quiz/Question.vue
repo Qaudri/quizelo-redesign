@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div class="select-none">
     <p class="cursor-pointer mx-4 font-normal text-lg md:text-2xl md:pr-36 text-gray-800 md:w-full">
       {{question}}
     </p>
