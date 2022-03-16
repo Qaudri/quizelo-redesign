@@ -11,8 +11,9 @@
       </div>
     </div>
 
-    <div>
-
+    <div class="px-2 py-6 bg-accent3-200">
+      <SectionsQuizCompleteQuestion />
+      <SectionsQuizCompleteAnswer />
     </div>
 
     <div class="flex items-center mx-auto my-4">
