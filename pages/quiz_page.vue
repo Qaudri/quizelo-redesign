@@ -94,7 +94,7 @@ export default {
     },
 
     submitQuiz(){
-      this.evaluateQuiz()
+      this.evaluateQuiz();
       this.$router.push({name:'summary'})
     },
   },
