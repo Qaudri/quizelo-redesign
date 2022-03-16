@@ -296,6 +296,16 @@ export const actions = {
   evaluateQuiz(context){
     context.commit("REVIEW_USER_OPTIONS")
   },
+
+  retrieveQuestionByNumber(context, question_no){
+    if (question_no >= -1) {
+      context.commit("SET_CURRENT_QUESTION", context.state.questions[question_no - 1])
+      context.commit("SET_QUESTION_COUNTER", question_no - 1)
+    } else{
+      context.commit("SET_CURRENT_QUESTION", context.state.questions[question_no])
+      context.commit("SET_QUESTION_COUNTER", question_no)
+    }
+  }
 }
 
 
@@ -377,5 +387,9 @@ export const mutations = {
 
     })
 
+  },
+
+  SET_QUESTION_COUNTER(state, payload) {
+    state.question_counter = payload
   }
 }

@@ -102,7 +102,7 @@ export default {
       this.$router.push({name:'summary'})
     },
 
-    switchQuestion(){
+    switchQuestion(item){
       this.retrieveQuestionByNumber(item)
     }
   },

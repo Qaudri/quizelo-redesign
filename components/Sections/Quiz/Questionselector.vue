@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div @click="emitQuestionNumber(item)" v-for="numberItem in question_no" :key="numberItem"
+    <div @click="emitQuestionNumber(item)" v-for="item in question_no" :key="item"
     class="select-none mx-4 h-10 w-10 rounded-lg flex items-center justify-center bg-white border-2 border-accent1-600 text-black font-medium">
-      {{numberItem}}
+      {{item}}
     </div>
   </div>
 </template>
