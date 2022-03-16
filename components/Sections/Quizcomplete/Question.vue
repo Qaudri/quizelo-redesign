@@ -6,7 +6,7 @@
         <img :src="require('@/assets/images/wrong.svg')" alt="">
       </div>
 
-      <div class="font-medium text-black text-lg">
+      <div class="font-medium text-black text-lg mx-4">
         This is the question
       </div>
     </div>
