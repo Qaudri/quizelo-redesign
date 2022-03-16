@@ -11,7 +11,7 @@
     <div class="w-full flex justify-center items-center">
       <div class=""> 
 
-        <SectionsQuizNumberlist class="w-full container mx-auto overflow-x-hidden flex justify-between my-6" />
+        <SectionsQuizQuestionselector :question_no="questionNo" class="w-full container mx-auto overflow-x-hidden flex justify-between my-6" />
 
         <div class="bg-accent1-300 bg-opacity-20 p-6 w-screen mx-auto">
           <SectionsQuizQuestion :question="question.question"  />
@@ -53,7 +53,8 @@ export default {
   computed: {
     ...mapGetters({
       question : 'quiz/getQuestion',
-      question2 : 'quiz/getQuestion'
+      question2 : 'quiz/getQuestion',
+      questionNo: 'quiz/getOverallQuestionNo'
 
     })
   },
@@ -106,9 +107,4 @@ export default {
 
 </script>
 <style>
-body{
-  /* position: relative; */
-  width: 100%;
-  height: 100%;
-}
 </style>
