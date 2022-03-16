@@ -11,7 +11,8 @@
     <div class="w-full flex justify-center items-center">
       <div class=""> 
 
-        <SectionsQuizQuestionselector :question_no="questionNo" class="w-full container mx-auto overflow-x-hidden flex justify-between my-6" />
+        <SectionsQuizQuestionselector @changeQuestion="switchQuestion"
+         :question_no="questionNo" class="w-full container mx-auto overflow-x-hidden flex justify-center my-6" />
 
         <div class="bg-accent1-300 bg-opacity-20 p-6 w-screen mx-auto">
           <SectionsQuizQuestion :question="question.question"  />
@@ -66,6 +67,8 @@ export default {
       retrievePreviousQuestion: 'quiz/retrievePreviousQuestion',
       chooseOption: 'quiz/chooseOption',
       evaluateQuiz: 'quiz/evaluateQuiz',
+      retrieveQuestionByNumber: 'quiz/retrieveQuestionByNumber'
+
 
     }),
 
@@ -98,6 +101,10 @@ export default {
       this.evaluateQuiz();
       this.$router.push({name:'summary'})
     },
+
+    switchQuestion(){
+      this.retrieveQuestionByNumber(item)
+    }
   },
 
   created(){
