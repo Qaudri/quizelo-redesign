@@ -18,7 +18,7 @@
           <SectionsQuizQuestion :question="question.question"  />
         </div>
 
-        <div class="px-6 md:px-0 grid grid-cols-2 container mx-auto gap-6 mt-14">
+        <div class="px-6 md:px-0 grid grid-cols-2 container mx-auto gap-4 md:gap-6 mt-8 md:mt-14">
           <SectionsQuizAnswer2  @OptionChosen="userChooseOption(answer)" v-for="answer in question.options" :key="answer.option_id"
           :selected="answer.selected" :option_text="answer.option_text" :option_tag="answer.option_tag" />
         </div>
