@@ -8,7 +8,7 @@
     </div>
 
     <div class="flex items-center justify-center">
-      <img :src="require('@/assets/images/clock.svg')" width="50px" alt="">
+      <img :src="require('@/assets/images/clock.svg')" class="w-12" alt="">
 
       <div class="cursor-pointer absolute font-medium text-black">
         {{countDown}}
@@ -36,7 +36,7 @@
       </div>
 
 
-      <div class="cursor-pointer flex mx-2 p-2 items-center">
+      <div class="cursor-pointer flex mx-2 p-2 items-center hidden md:block">
         <p class="font-medium text-accent1-600 mr-2">Skip</p>
         <img :src="require('@/assets/images/fast-forward.svg')" class="mt-1" alt="" width="12px">
       </div> 
