@@ -29,7 +29,7 @@
     
     <div class="container mx-auto">
 
-      <div class="mb-4 w-full absolute bottom-0 px-14 md:px-0 flex justify-between container mx-auto">
+      <div class="mb-4 w-full absolute bottom-0 px-8 md:px-0 flex justify-between container mx-auto">
         <SectionsQuizNavbar @timeOver="showNextQuestion"
         @PreviousQuestion="showPreviousQuestion" @NextQuestion="showNextQuestion" />
       </div>

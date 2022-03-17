@@ -3,7 +3,7 @@
     <UiSharedLogo />
 
     <a href="#" @click="emitModalEvent"
-      class=" cursor-pointer md:mx-8 border bg-gradient-to-r from-accent1-500 to-accent2-500 text-lg  px-7 py-3 uppercase text-white rounded-lg font-medium">
+      class=" cursor-pointer border bg-gradient-to-r from-accent1-500 to-accent2-500 md:text-lg text-base px-4 md:px-7 py-2 md:py-3 uppercase text-white rounded-lg font-medium">
       Submit quiz
     </a>
   </div>
