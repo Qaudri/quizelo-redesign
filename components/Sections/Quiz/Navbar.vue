@@ -36,7 +36,7 @@
       </div>
 
 
-      <div class="cursor-pointer flex mx-2 p-2 items-center hidden md:block">
+      <div class="cursor-pointer mx-2 p-2 items-center hidden md:flex">
         <p class="font-medium text-accent1-600 mr-2">Skip</p>
         <img :src="require('@/assets/images/fast-forward.svg')" class="mt-1" alt="" width="12px">
       </div> 

@@ -9,7 +9,7 @@
 
       <div class="flex justify-center">
         <div>
-          <h1 class="my-6 font-bold text-6xl text-accent1-600">
+          <h1 class="md:my-6 my-4 font-bold text-5xl md:text-6xl text-accent1-600">
             Congratulations!
           </h1>
           <p class="flex justify-center font-normal text-lg">You have completed the quiz!</p>
@@ -53,7 +53,7 @@ export default {
 
 <style>
 .fade-out{
-  animation: fadeOut 1s forwards;
+  animation: fadeOut .5s forwards;
 }
 
 @keyframes fadeOut {
