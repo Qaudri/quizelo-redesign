@@ -47,7 +47,8 @@ export default {
 
   data(){
     return{
-      dialog_open: false
+      dialog_open: false,
+      navigation_text: ''
     }
   },
 
@@ -73,10 +74,12 @@ export default {
     }),
 
     showNextQuestion(){
+      this.navigation_text = "next"
       this.retrieveNextQuestion()
     },
 
     showPreviousQuestion(){
+      this.navigation_text = "previous"
       this.retrievePreviousQuestion()
     },
 
