@@ -46,32 +46,6 @@
 
 <script>
 export default {
-  data() {
-      return {
-          countDown: 300
-      }
-  },
-
-  watch: {
-
-    countDown: {
-      handler(value) {
-
-        if (value > 0) {
-          setTimeout(() => {
-            this.countDown--;
-          }, 1000);
-        }
-
-        else if (value === 0) {
-          this.$emit("timeOver");
-        }
-
-      },
-      immediate: true // This ensures the watcher is triggered upon creation
-    }
-
-  },
 
   methods: {
     emitNextEvent(){

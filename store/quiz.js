@@ -199,6 +199,10 @@ export const state = () => ({
 })
 
 export const getters = {
+  getQuizDuration(state){
+    return state.quiz_duration
+  },
+
   getQuizQuestion(state) {
     return state.current_question
   },
