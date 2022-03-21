@@ -192,8 +192,10 @@ export const state = () => ({
   final_score: 0,
   quiz_summary: [],
   current_question: '',
+  current_question_no: 1,
   answered_questions: [],
-  question_counter: 0
+  question_counter: 0,
+  quiz_duration: 10,
 })
 
 export const getters = {
@@ -256,6 +258,10 @@ export const getters = {
       return state.current_question
     }
   },
+
+  getCurrentQuestionNumber(state){
+    return state.current_question_no
+  }
 }
 
 export const actions = {
@@ -273,6 +279,8 @@ export const actions = {
     else{
       context.commit("INCREASE_QUESTION_COUNTER");
       context.commit ("SET_CURRENT_QUESTION", context.state.questions[context.state.question_counter])
+      context.commit("SET_CURRENT_QUESTION_NUMBER", context.state.current_question_no + 1 )
+
     }
   },
 
@@ -284,6 +292,8 @@ export const actions = {
     else{
       context.commit("DECREASE_QUESTION_COUNTER");
       context.commit ("SET_CURRENT_QUESTION", context.state.questions[context.state.question_counter])
+      context.commit("SET_CURRENT_QUESTION_NUMBER", context.state.current_question_no - 1)
+
     }
   },
 
@@ -301,9 +311,12 @@ export const actions = {
     if (question_no >= -1) {
       context.commit("SET_CURRENT_QUESTION", context.state.questions[question_no - 1])
       context.commit("SET_QUESTION_COUNTER", question_no - 1)
+      context.commit("SET_CURRENT_QUESTION_NUMBER", question_no )
     } else{
       context.commit("SET_CURRENT_QUESTION", context.state.questions[question_no])
       context.commit("SET_QUESTION_COUNTER", question_no)
+      context.commit("SET_CURRENT_QUESTION_NUMBER", question_no )
+
     }
   }
 }
@@ -391,5 +404,9 @@ export const mutations = {
 
   SET_QUESTION_COUNTER(state, payload) {
     state.question_counter = payload
+  },
+
+  SET_CURRENT_QUESTION_NUMBER(state, payload){
+    state.current_question_no = payload
   }
 }

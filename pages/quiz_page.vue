@@ -11,8 +11,8 @@
     <div class="w-full flex justify-center items-center">
       <div class=""> 
 
-        <SectionsQuizQuestionselector @changeQuestion="switchQuestion" 
-         :question_no="questionNo" class="w-full container mx-auto overflow-x-hidden flex justify-center my-6" />
+        <SectionsQuizQuestionselector @changeQuestion="switchQuestion" :active_question_no="currentNo"
+         :question_no="questionNo" class="w-full container mx-auto overflow-x-hidden flex justify-center my-6 md:mb-6" />
 
         <div class="bg-accent1-300 bg-opacity-20 p-6 w-screen mx-auto">
           <SectionsQuizQuestion :question="question.question"  />
@@ -30,7 +30,7 @@
     <div class="container mx-auto">
 
       <div class="mb-4 w-full absolute bottom-0 px-8 md:px-0 flex justify-between container mx-auto">
-        <SectionsQuizNavbar @timeOver="showNextQuestion"
+        <SectionsQuizNavbar @timeOver="submitQuiz"
         @PreviousQuestion="showPreviousQuestion" @NextQuestion="showNextQuestion" />
       </div>
 
@@ -56,7 +56,8 @@ export default {
     ...mapGetters({
       question : 'quiz/getQuestion',
       question2 : 'quiz/getQuestion',
-      questionNo: 'quiz/getOverallQuestionNo'
+      questionNo: 'quiz/getOverallQuestionNo',
+      currentNo: 'quiz/getCurrentQuestionNumber'
 
     })
   },
@@ -106,7 +107,7 @@ export default {
     },
 
     switchQuestion(item){
-      this.retrieveQuestionByNumber(item)
+      this.retrieveQuestionByNumber(item);
     }
   },
 

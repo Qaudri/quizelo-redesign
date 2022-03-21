@@ -63,7 +63,7 @@ export default {
           }, 1000);
         }
 
-        else {
+        else if (value === 0) {
           this.$emit("timeOver");
         }
 
