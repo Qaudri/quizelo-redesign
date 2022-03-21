@@ -48,7 +48,7 @@
 export default {
   data() {
       return {
-          countDown: 30
+          countDown: 300
       }
   },
 
@@ -65,7 +65,6 @@ export default {
 
         else {
           this.$emit("timeOver");
-          this.countDown = 30
         }
 
       },
@@ -77,12 +76,10 @@ export default {
   methods: {
     emitNextEvent(){
       this.$emit("NextQuestion")
-      this.countDown = 30
     },
 
     emitPreviousEvent(){
       this.$emit("PreviousQuestion")
-      this.countDown = 30
     }
   }
 }
